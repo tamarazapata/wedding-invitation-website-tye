@@ -371,15 +371,24 @@ a:hover{
 /* <===================HANDS===================> */
 
 .hands{
-    height: 120vh;
+    height: 100vh;
     width: 100%;
     background-image: url(./assets/img/saltoleon.jpg);
     background-size: cover;
-    background-position-y: top;
+    background-position-y: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
+@media (max-width:1000px){
+    .hands{
+        background-position-x: center;
+        background-image: url(./assets/img/saltoleon2.jpg);
+
+
+
+    }
+}
     /* <===================STAY===================> */
 #stay{
     background-color: var(--grey-color);
