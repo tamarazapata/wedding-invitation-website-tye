@@ -382,9 +382,7 @@ a:hover{
 
 @media (max-width:800px){
     .hands{
-        background-position-x: center;
-        background-size:contain;
-        background-image: url(./assets/img/terranova.JPEG);
+        background-image: url(./assets/img/terranova.jpg);
     }
 }
     /* <===================STAY===================> */
