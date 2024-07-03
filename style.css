@@ -383,6 +383,8 @@ a:hover{
 @media (max-width:800px){
     .hands{
         background-image: url(./assets/img/terranova.jpg);
+        background-size: 100% auto;
+        background-attachment: fixed !important;
     }
 }
     /* <===================STAY===================> */
