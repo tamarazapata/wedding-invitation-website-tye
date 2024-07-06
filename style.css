@@ -5,9 +5,9 @@
 /* <===================CSS VARIABLES===================> */
 
 :root{
-    --h1-size: 7rem;
+    --h1-size: 8rem;
     --h2-size: 2.1rem;
-    --h3-size: 1.7rem;
+    --h3-size: 1.8rem;
     --text-size: 1.3rem;
     --horizontal-margin-spacing:6rem;
     --grey-color-light: rgba(232,230,230,.6);
@@ -24,6 +24,13 @@
 }
 html{
     scroll-behavior: smooth;
+}
+a {
+    cursor: pointer; /* Asegura que el cursor cambie a una mano */
+}
+a:hover, a.active{
+    background: none;
+    color: rgb(146, 138, 138);
 }
 
 .music {
@@ -65,20 +72,27 @@ h3{
     /* font-size: x-large;
     line-height: 1.8rem; */
 }
+
+.text a {
+    cursor: pointer; /* Asegura que el cursor cambie a una mano */
+    text-decoration: underline; /* Opcional: añade subrayado para mayor claridad */
+    color: rgb(18, 18, 18);
+}
 .confetti-button{
     display: block;
-    font-size: 1rem;
+    font-size: 1.5rem;
     background: transparent;
-    border: 1px solid #212121;
+    border: 1.1px solid #212121;
     padding: 25px 50px;
     border-radius: 50px;
     width: fit-content;
-    margin: 30px 0;
+    margin: 4rem 0;
+    cursor: pointer;
 }
 
 .confetti-button:hover{
-    color: rgb(234, 14, 14);
-    border-color: rgb(223, 20, 20);
+    color: rgb(14, 18, 234);
+    border-color: rgb(13, 13, 13);
 }
 
 .v-reposition-container{
@@ -122,6 +136,7 @@ nav ul li a{
     text-transform: uppercase;
     text-decoration: none;
 }
+
 a:hover{
     color: orange;
     transition: .5s;
@@ -147,6 +162,10 @@ a:hover{
     html{
         font-size: 8px;
     }
+    a:hover, a.active{
+        background: none;
+        color: grey;
+    }
 }
 @media (max-width:570px){
     .checkbtn{
@@ -156,7 +175,9 @@ a:hover{
         position: fixed;
         width: 100%;
         height: 100vh;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(8px);
+        background-color: rgb(255, 255, 255);
+        opacity:90%;
         top: 80px;
         font-weight: bold;
         left: -100%;
@@ -294,12 +315,12 @@ a:hover{
     #story h3{
         width: 100%;
         margin: 5px 0;
-        font-size: var(--h3-size);
+        font-size: var(--h2-size);
     }
     #story p{
         width: 100%;
         margin: 5px 0;
-        font-size: var(--text-size);
+        font-size: small;
         line-height: var(--text-size);
     }
 }
@@ -368,26 +389,8 @@ a:hover{
     }
 }
 
-/* <===================HANDS===================> */
 
-.hands{
-    height: 100vh;
-    width: 100%;
-    background-image: url(./assets/img/saltoleon.jpg);
-    background-size: cover;
-    background-position-x: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-
-@media (max-width:800px){
-    .hands{
-        background-image: url(./assets/img/terranova.jpg);
-        background-size: 100% auto;
-        background-attachment: fixed !important;
-    }
-}
-    /* <===================STAY===================> */
+/* <===================STAY===================> */
 #stay{
     background-color: var(--grey-color);
     padding: 10vh var(--horizontal-margin-spacing);
@@ -408,8 +411,6 @@ a:hover{
     text-decoration: underline;
 }
 
-
-
 @media (max-width:1000px){
     .stay-container{
         flex-direction: column;
@@ -420,63 +421,45 @@ a:hover{
     }
 }
 
-/* <===================REGISTRY===================> */
 
-#registry{
-    padding: 20vh var(--horizontal-margin-spacing) 0 var(--horizontal-margin-spacing); 
+/* <===================INFORMATION===================> */
+#important-information{
+    padding-top: 15vh;
+    padding-bottom: 15vh;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
 }
-.registry-container{
-    display: block;
-    width: 30vw;
-}
-.registry-container .text{
-    text-align: justify;
-    margin: 20px 0;
-}
-.registry-img{
-    display: block;
-    height: 100vh;
-    width: 40vw;
-    background-image:url(./assets/img/bici.JPG) ;
-    background-size: cover;
-    background-position-y: top;
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-}
-.registry-img-sm{
-    display: none;
-}
-.registry-img-lg{
-    display: block;
-}
-@media (max-width:1000px){
-    #registry{
-        flex-direction: column;
-    }
-    .registry-img{
-        width: 100%;
-        height: 50vh;
-    }
-    .registry-img-sm{
-        margin-top: 10vh;
-        display: block;
-    }
-    .registry-img-lg{
-        display: none;
-    }
-    .registry-container{
-        width: 100%;
-    }
-    #registry button{
-        margin-inline: auto;
-    }
+.important-info-container{
+    width: 80vw;
 }
 
+
+.important-information text{
+    text-align: center;
+    margin: 20px 0 10vh 0;
+}
+@media (max-width:1570px){
+    .important-information text{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
 
 /* <===================PARTING MESSAGE===================> */
+
+.parting-message{
+    background-color: var(--grey-color-light);
+    padding: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
 .parting-message h1{
     margin-top: 10vh;
     text-align: center;
@@ -490,31 +473,43 @@ a:hover{
 
 
 .parting-message button{
-    margin:  10vh auto;
+    margin:  5vh auto;
+}
+
+.parting-message a{
+    text-decoration: none;
+}
+
+.parting-message img{
+    width: 15%;
+    border-radius: 50%;
+    align-items: center;
 }
 
 .parting-message-btn{
     display: block;
-    font-size: 1rem;
+    font-size: 1.5rem;
     background: transparent;
     border: 1px solid #212121;
     padding: 25px 50px;
     border-radius: 50px;
     width: fit-content;
-    margin: 30px 0;
+    text-decoration: none;
+    margin: 0 0;
 }
+
 
 
 /* <===================FOOTER===================> */
 
 footer{
-    margin-top: 20vh;
+    margin-top: 2vh;
+    background-color: white;
     height: fit-content;
     width: 100%;
-    background-color: var(--grey-color);
     padding: 10vh 30px;
 }
 footer h2{
-    font-size: 2Srem;
+    font-size: 2rem;
     font-weight: normal;
 }
