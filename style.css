@@ -484,6 +484,8 @@ a:hover{
     width: 20%;
     border-radius: 0%;
     max-width: fit-content;
+    min-width: none;
+    min-height: auto;
     align-items: center;
 }
 
